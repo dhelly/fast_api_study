@@ -299,4 +299,29 @@ git commit -m "Configuração inicial do projeto"
 git push
 
 ```
+## Criando os CRUDs
+
+Respostas da API
+
+Usamos códigos de status para informar ao cliente o resultado das operações no servidor, como se um dado foi criado, encontrado, atualizado ou excluído com sucesso. Por isso investiremos mais algum momento aqui.
+
+Os códigos que devemos prestar atenção para responder corretamente as requisições. Os casos de sucesso incluem:
+
+- 200 OK: Indica sucesso na requisição.
+        GET: Quando um dado é solicitado e retornado com sucesso.
+        PUT: Quando dados são alterados com sucesso.
+- 201 CREATED: Significa que a solicitação resultou na criação de um novo recurso.
+        POST: Aplicável quando um dado é enviado e criado com sucesso.
+        PUT: Usado quando uma alteração resulta na criação de um novo recurso.
+- 204 NO CONTENT: Retorno do servidor sem conteúdo na mensagem.
+        PUT: Aplicável se a alteração não gerar um retorno.
+        DELETE: Usado quando a ação de deletar não gera um retorno.
+
+Os códigos de erro mais comuns que temos que conhecer para lidar com possíveis erros na aplicação, são:
+
+- 404 NOT FOUND: O recurso solicitado não pôde ser encontrado.
+- 422 UNPROCESSABLE ENTITY: o pedido foi bem formado (ou seja, sintaticamente correto), mas não pôde ser processado.
+- 500 INTERNAL SERVER ERROR: Uma mensagem de erro genérica, dada quando uma condição inesperada foi encontrada. Geralmente ocorre quando nossa aplicação apresenta um erro.
+
+
 
