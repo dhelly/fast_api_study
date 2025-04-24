@@ -323,5 +323,37 @@ Os códigos de erro mais comuns que temos que conhecer para lidar com possíveis
 - 422 UNPROCESSABLE ENTITY: o pedido foi bem formado (ou seja, sintaticamente correto), mas não pôde ser processado.
 - 500 INTERNAL SERVER ERROR: Uma mensagem de erro genérica, dada quando uma condição inesperada foi encontrada. Geralmente ocorre quando nossa aplicação apresenta um erro.
 
+## ORM
 
+Usaremos o `pydantic-settings` para gerenciar nossas configurações de ambiente. A biblioteca permite que você defina configurações em arquivos separados ou variáveis de ambiente e acesse-as de uma maneira estruturada e segura em seu código.
+
+```bash
+poetry add sqlalchemy
+```
+
+Além disso, para evitar a escrita de configurações do banco de dados diretamente no código-fonte, usaremos o pydantic-settings. Este pacote nos permite gerenciar as configurações do nosso aplicativo de uma maneira mais segura e estruturada.
+
+```bash
+poetry add pydantic-settings
+```
+
+Agora, começaremos instalando o Alembic, que é uma ferramenta de migração de banco de dados para SQLAlchemy. Usaremos o Poetry para adicionar o Alembic ao nosso projeto:
+
+```bash
+poetry add alembic
+```
+Após a instalação do Alembic, precisamos iniciá-lo em nosso projeto. O comando de inicialização criará um diretório migrations e um arquivo de configuração alembic.ini:
+
+```bash
+alembic init migrations
+```
+
+Feitas essas alterações, estamos prontos para gerar nossa primeira migração automática. O Alembic é capaz de gerar migrações a partir das mudanças detectadas nos nossos modelos do SQLAlchemy.
+
+Para criar a migração, utilizamos o seguinte comando:
+$ Execução no terminal!
+
+```bash
+alembic revision --autogenerate -m "create users table"
+```
 
