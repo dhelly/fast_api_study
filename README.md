@@ -351,9 +351,35 @@ alembic init migrations
 Feitas essas alterações, estamos prontos para gerar nossa primeira migração automática. O Alembic é capaz de gerar migrações a partir das mudanças detectadas nos nossos modelos do SQLAlchemy.
 
 Para criar a migração, utilizamos o seguinte comando:
-$ Execução no terminal!
 
 ```bash
 alembic revision --autogenerate -m "create users table"
 ```
+
+## Geração de Tokens JWT
+
+Instalando a biblioteca `pyjwt`
+
+```bash
+poetry add pyjwt
+```
+Caso tenha problemas com o timezone. Instale a biblioteca `tzdata`
+
+```bash
+poetry add tzdata
+```
+### Hashing de Senhas
+
+É uma boa prática é o criptografar o hash das senhas
+
+```bash
+poetry add "pwdlib[argon2]"
+```
+
+
+
+
+
+
+
 
