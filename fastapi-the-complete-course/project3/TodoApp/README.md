@@ -19,5 +19,8 @@ openssl rand -hex 32
 # Dependência para trabalhar com Banco de dados Postgres
 uv add psycopg2-binary
 
+# Dependência para trabalhar com Banco de dados Mysql
+uv add pymsql
+#SQLALCHEMY_DATABASE_URL = 'mysql+pymysql://root:root@localhost:3306/TodoApplicationDatabase'
 
 ```
