@@ -99,11 +99,25 @@ def downgrade() -> None:
 alembic upgrade 9d6bb04efb9d
 ```
 
+### Testes com pytest
 
+1 - Criar um diretório Teste
 
+2 - Criar o arquivo `__init__.py`
 
+3 - Criar o `test_example.py`
 
+4 - Instalar o pytest
 
+```bash
+uv add pytest
+```
 
+5 - Crie um teste
 
+6 - Execute o pytest
+
+```bash
+uv run pytest
+```
 
