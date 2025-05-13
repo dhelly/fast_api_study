@@ -121,3 +121,10 @@ uv add pytest
 uv run pytest
 ```
 
+Observação:
+
+Pytest não consegue testar assincronimos por padrão. Será necessário instalar um biblioteca.
+
+```bash
+uv add pytest-asyncio
+```
